@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Interaktif</title>
+    <script>
+        function showAlert() {
+            alert('Ini alert yang dimunculkan dari skrip!');
+        }
+        function showPrompt() {
+            var answ = prompt('Masukkan Nilai Jawaban','');
+            document.getElementById("jawaban").innerHTML = "Jawaban Anda : "+answ;
+        }
+        function showConfirm(){
+            var value = confirm('Apakah Anda ingin belajar Javascript Sekarang');
+            if(value){
+                document.getElementById("jawaban").innerHTML = "Ya, Saya ingin belajar Javascript!";
+            } else {
+                document.getElementById("jawaban").innerHTML = "Tidak, Saya tidak ingin belajar Javascript!";
+            }
+        }
+    </script>
+</head>
+<body>
+ <h3>Contoh Pesan Interaktif</h3>   
+ <button onclick="showAlert()">Alert</button>
+ <button onclick="showPrompt()">Prompt</button>
+ <button onclick="showConfirm()">Confirmation</button>
+ <span id="jawaban">Jawaban muncul disini</span>
+</body></html>

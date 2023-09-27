@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabel dan Operation</title>
+    <style>
+        .row {
+            display: table;
+            margin: 4px auto;
+            padding: 10px;
+        }
+        input {
+            display: inline;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 4px;
+        }
+    </style>
+    <script>
+
+        function tambah() {
+            const angka1 = document.getElementById("x").value;
+            const angka2 = document.getElementById("y").value;
+            var result = parseInt(angka1) + parseInt(angka2);
+            document.getElementById("hasil").value = result;
+            document.getElementById("operator").innerText = "+";
+        }
+        function kurang() {
+            const angka1 = document.getElementById("x").value;
+            const angka2 = document.getElementById("y").value;
+            var result = parseInt(angka1) - parseInt(angka2);
+            document.getElementById("hasil").value = result;
+            document.getElementById("operator").innerText = "-";
+        }
+        function kali() {
+            const angka1 = document.getElementById("x").value;
+            const angka2 = document.getElementById("y").value;
+            var result = parseInt(angka1) * parseInt(angka2);
+            document.getElementById("hasil").value = result;
+            document.getElementById("operator").innerText = "*";
+        }
+        function bagi() {
+            const angka1 = document.getElementById("x").value;
+            const angka2 = document.getElementById("y").value;
+            if(angka2==='0'){
+                alert('Pembagi tidak boleh Nol');
+            }
+            var result = parseInt(angka1) / parseInt(angka2);
+            document.getElementById("hasil").value = result;
+            document.getElementById("operator").innerText = "/";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="row">
+        <input type="number" id="x" value="0" placeholder="masukkan angka pertama">
+        <span id="operator"></span>
+        <input type="number" id="y" value="0" placeholder="masukkan angka kedua">
+        = <input type="number" id="hasil" value="0" placeholder="hasil operasi" readonly>
+    </div>
+
+    <div class="row">
+        <button onclick="tambah()">Tambahkan</button>
+        <button onclick="kurang()">Kurangkan</button>
+        <button onclick="kali()">Kalikan</button>
+        <button onclick="bagi()">Bagikan</button>
+    </div>
+
+</body>
+
+</html>
