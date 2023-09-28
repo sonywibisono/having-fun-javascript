@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Kredit</title>
+    <link rel="stylesheet" href="./external.css">
+</head>
+<body>
+    <h2>Aplikasi Simulasi Kredit</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Harga Barang: Rp.</th>
+                <td><input type="number" id="harga" placeholder="Masukkan harga barang tanpa Rp"></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="right">DP : Rp.</td>
+                <td><input type="number" id="dp" placeholder="Nilai DP"></td>
+            </tr>
+            <tr>
+                <td align="right">Tenor (tahun) :</td>
+                <td><input type="number" id="tahun" placeholder="12"></td>
+            </tr>
+            <tr>
+                <td align="right">Bunga (%)/tahun:</td>
+                <td><input type="number" id="bunga" placeholder="2%"></td>
+            </tr>
+            <tr>
+                <td align="right">Cicilan/Bulan: Rp.</td>
+                <td><input type="number" id="cicilan" value="0" readonly></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button>Proses</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

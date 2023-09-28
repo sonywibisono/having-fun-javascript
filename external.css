@@ -1,0 +1,16 @@
+.row {
+    display: table;
+    margin: 4px auto;
+    padding: 10px;
+}
+input {
+    display: inline;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 4px;
+}
+button {
+    margin: 4px;
+    padding: 10px;
+    border-radius: 5px;
+}
