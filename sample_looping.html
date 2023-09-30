@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Looping</title>
+    <link rel="stylesheet" href="./external.css">
+    <script>
+        function loop1() {
+            var counter = 10;
+            var  container = document.getElementById("container");
+            for(i=0;i<counter;i++){
+                var html = `<p>i : ${i}</p>`;
+                container.innerHTML += html;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Belajar Looping</h2>
+    <div id="container"></div>
+    <p>
+        <button onclick="loop1()">Proses</button>
+    </p>
+</body>
+</html>

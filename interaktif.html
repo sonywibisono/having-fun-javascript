@@ -12,6 +12,7 @@
         function showPrompt() {
             var answ = prompt('Masukkan Nilai Jawaban','');
             document.getElementById("jawaban").innerHTML = "Jawaban Anda : "+answ;
+            return answ;
         }
         function showConfirm(){
             var value = confirm('Apakah Anda ingin belajar Javascript Sekarang');
@@ -28,5 +29,5 @@
  <button onclick="showAlert()">Alert</button>
  <button onclick="showPrompt()">Prompt</button>
  <button onclick="showConfirm()">Confirmation</button>
- <span id="jawaban">Jawaban muncul disini</span>
+ <p><span id="jawaban">Jawaban muncul disini</span></p>
 </body></html>
