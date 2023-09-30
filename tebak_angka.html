@@ -6,15 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tebak Angka</title>
     <link rel="stylesheet" href="./external.css">
+    <script>
+        var jawaban;
+        function generateAngka(){
+            var angka = Math.abs(Math.random() * 100);
+            return parseInt(angka.toFixed(0));
+        }
+        function tebak(){
+            var tebakan = document.getElementById('tebakan').value;
+            // console.log(tebakan);
+            if(parseInt(tebakan)>100){
+                alert('Anda tidak diijinkan memasukkan Angka melebihi 100');
+            } else if(parseInt(tebakan)<0){
+                alert('Anda tidak diijinkan memasukkan Angka kurang dari Nol');
+            } else if(parseInt(tebakan)>jawaban){
+                alert('Tebakan Anda kebesaran!');
+            } else if(parseInt(tebakan)<jawaban){
+                alert('Tebakan Anda kekecilan!');
+            } else {
+                alert('Selamat, Tebakan Anda Benar, jawaban adalah '+jawaban);
+            }
+
+        }
+        function start() {
+            jawaban = generateAngka();
+            // console.log(jawaban);
+        }
+    </script>
 </head>
 <body>
     <h2>Game Tebak Angka</h2>
     <div class="row">
-        <input type="number" name="angka" id="angka" placeholder="Tebakan Anda!">
+        <input type="number" name="tebakan" id="tebakan" placeholder="Tebakan Anda!">
     </div>
     <div class="row">
-        <button>Mulai</button>
-        <button>Cek Tebakan</button>
+        <button onclick="start();">Mulai</button>
+        <button onclick="tebak();">Cek Tebakan</button>
     </div>
 </body>
 </html>
